@@ -5,4 +5,38 @@
     padding: 0;
 }
 
+ul {
+    list-style-type: none;
+}
+
 /* #endregion Regole Reset */
+
+/* #region Main Content */
+.main-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: cornflowerblue;
+}
+
+/* #endregion Main Content */
+
+/* #region Email List */
+.email-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+/* ! Email */
+.email {
+    padding: 0.25rem 1rem;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+/* #endregion Email List */
