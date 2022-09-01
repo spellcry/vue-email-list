@@ -13,7 +13,14 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>    
 </head>
 <body>
-    
+    <main class="main-content" id="app">
+        <ul class="email-list">
+            <li v-for="email in emails" class="email">
+                {{ email }}
+            </li>
+        </ul>
+    </main>
+
     <script type="text/javascript" src="./js/scripts.js"></script>
 </body>
 </html>
