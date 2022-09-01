@@ -3,6 +3,12 @@ const app = new Vue({
     data: {
         name: 'Email List',
         emails: [],
+        numMaxEmails: 10,
+    },
+    computed: {
+        isFull() {
+            return this.emails.length === this.numMaxEmails;
+        }
     },
     methods: {
         getEmail() {

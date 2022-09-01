@@ -15,9 +15,11 @@
 <body>
     <main class="main-content" id="app">
         <ul class="email-list">
-            <li v-for="email in emails" class="email">
-                {{ email }}
-            </li>
+            <template v-if="isFull">
+                <li v-for="email in emails" class="email">
+                    {{ email }}
+                </li>
+            </template>
         </ul>
     </main>
 
