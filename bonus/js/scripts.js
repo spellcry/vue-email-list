@@ -4,6 +4,7 @@ const app = new Vue({
         name: 'Email List',
         emails: [],
         numMaxEmails: 10,
+        readyToPrint: false,
     },
     computed: {
         isFull() {
@@ -12,9 +13,10 @@ const app = new Vue({
     },
     methods: {
         getEmail() {
-            for ( let i = 0; i < 10; i++ ) {
+            for ( let i = 0; i < this.numMaxEmails; i++ ) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((res) => {
-                    this.emails.push(res.data.response);   
+                    this.emails.push(res.data.response);
+                    this.readyToPrint = i === this.numMaxEmails - 1 ? true : false;
                 });        
             }
         },

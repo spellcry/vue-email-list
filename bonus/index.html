@@ -15,7 +15,7 @@
 <body>
     <main class="main-content" id="app">
         <ul class="email-list">
-            <template v-if="isFull">
+            <template v-if="readyToPrint">
                 <li v-for="email in emails" class="email">
                     {{ email }}
                 </li>
